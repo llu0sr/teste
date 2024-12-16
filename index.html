@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+    <div class="caixa">
+        <h1>Bem-Vinda!</h1>
+        <h2>Digite a senha para continuar:</h2><br>
+        <input type="password" id="password" placeholder="Senha">
+        <button onclick="checkPassword()">Entrar</button>
+        <p id="message" style="color: rgb(68, 68, 68);"></p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const inputPassword = document.getElementById('password').value;
+            const correctPassword = '0914';
+            if (inputPassword === correctPassword) {
+                window.location.href = "botoes/convite.html"; 
+            } else {
+                document.getElementById('message').innerText = "Senha incorreta!";
+            }
+        }
+    </script>
+</body>
+</html>
